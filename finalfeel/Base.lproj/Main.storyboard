@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="finalfeel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="finalfeel2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +94,7 @@
         <!--Signup View Controller-->
         <scene sceneID="gh8-w6-CsE">
             <objects>
-                <viewController id="wWb-SQ-7bu" customClass="signupViewController" customModule="finalfeel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wWb-SQ-7bu" customClass="signupViewController" customModule="finalfeel2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lfv-Xc-Da3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,18 +166,91 @@
             </objects>
             <point key="canvasLocation" x="1613" y="1014"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Xob-iD-Rtr">
+            <objects>
+                <viewController id="zAh-mc-53f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6RD-49-jmE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99952143429999996" green="0.99285858869999999" blue="0.94900017979999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="mYr-rs-gXi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pU-J4-01D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2661" y="1144"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="YrY-0w-3br">
             <objects>
-                <viewController storyboardIdentifier="HomeVc" id="yiR-5h-SVj" customClass="homeViewController" customModule="finalfeel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVc" id="yiR-5h-SVj" customClass="homeViewController" customModule="finalfeel2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="75b-Uk-TdO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="next" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qF-bI-yYA">
-                                <rect key="frame" x="186" y="351" width="33" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsG-d9-qrM">
+                                <rect key="frame" x="216" y="655" width="112" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Button" image="blog_on"/>
+                                <state key="selected" image="blog_off"/>
+                                <connections>
+                                    <action selector="blogClicked:" destination="yiR-5h-SVj" eventType="touchUpInside" id="qdH-wa-yu8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRc-wp-cZK">
+                                <rect key="frame" x="285" y="768" width="112" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="setting_on"/>
+                                <state key="selected" image="setting_off"/>
+                                <connections>
+                                    <action selector="settingClicked:" destination="yiR-5h-SVj" eventType="touchUpInside" id="WZ5-Ou-JlZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvr-tN-mEq">
+                                <rect key="frame" x="20" y="768" width="114" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Psy_on"/>
+                                <state key="selected" image="Psy_off"/>
+                                <connections>
+                                    <action selector="phychoClicked:" destination="yiR-5h-SVj" eventType="touchUpInside" id="ty9-lL-QcT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gco-R4-2Eg">
+                                <rect key="frame" x="71" y="656" width="111" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="mood_on"/>
+                                <state key="selected" image="mood_off"/>
+                                <connections>
+                                    <action selector="moodClicked:" destination="yiR-5h-SVj" eventType="touchUpInside" id="hIn-TJ-Ki6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="386-vZ-OCC">
+                                <rect key="frame" x="151" y="769" width="111" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="more_off"/>
+                                <state key="selected" image="more_on"/>
+                                <connections>
+                                    <action selector="moreClicked:" destination="yiR-5h-SVj" eventType="touchUpInside" id="YWc-Dd-lqT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMg-iW-pDO">
+                                <rect key="frame" x="147" y="59" width="111" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="near_on"/>
+                                <state key="selected" image="near_off"/>
+                                <connections>
+                                    <action selector="nearClicked:" destination="yiR-5h-SVj" eventType="touchUpInside" id="EYW-6B-EBG"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="date1" translatesAutoresizingMaskIntoConstraints="NO" id="l3N-2s-c57">
+                                <rect key="frame" x="72" y="181" width="271" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFV-cI-htL">
+                                <rect key="frame" x="95" y="188" width="233" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -185,15 +258,29 @@
                         <color key="backgroundColor" red="0.99967402220000001" green="0.99685007329999997" blue="0.94116944069999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="Nb4-2D-wzM"/>
                     </view>
+                    <connections>
+                        <outlet property="blog" destination="RsG-d9-qrM" id="Geb-nw-0gx"/>
+                        <outlet property="date" destination="HFV-cI-htL" id="vOJ-nw-kCO"/>
+                        <outlet property="mood" destination="gco-R4-2Eg" id="1aI-dO-vkp"/>
+                        <outlet property="more" destination="386-vZ-OCC" id="nIR-Ng-uOi"/>
+                        <outlet property="phycho" destination="Rvr-tN-mEq" id="Ic5-vp-uh3"/>
+                        <outlet property="setting" destination="IRc-wp-cZK" id="WEF-o1-dqQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ik-qv-sC0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DMx-Xm-UJV">
+                    <rect key="frame" x="0.0" y="0.0" width="75" height="63"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button" image="mood_off"/>
+                    <state key="selected" image="mood_on"/>
+                </button>
             </objects>
-            <point key="canvasLocation" x="2645" y="448"/>
+            <point key="canvasLocation" x="2644.9275362318845" y="447.99107142857139"/>
         </scene>
         <!--Signin View Controller-->
         <scene sceneID="Nxu-dR-pXC">
             <objects>
-                <viewController id="OlZ-yq-QLw" customClass="signinViewController" customModule="finalfeel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OlZ-yq-QLw" customClass="signinViewController" customModule="finalfeel2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XY0-Hk-6mz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,7 +289,7 @@
                                 <rect key="frame" x="40" y="406" width="334" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ERROR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOS-DU-YJi">
                                 <rect key="frame" x="40" y="553" width="334" height="60"/>
@@ -288,11 +375,24 @@
         <segue reference="t23-8v-gw6"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Psy_off" width="287" height="287"/>
+        <image name="Psy_on" width="287" height="287"/>
         <image name="applogo" width="945" height="708.5"/>
         <image name="back" width="154" height="146"/>
+        <image name="blog_off" width="287" height="287"/>
+        <image name="blog_on" width="287" height="287"/>
+        <image name="date1" width="1375" height="262"/>
         <image name="facebook" width="179" height="167"/>
         <image name="google" width="179" height="167"/>
+        <image name="mood_off" width="287" height="287"/>
+        <image name="mood_on" width="287" height="287"/>
         <image name="moodit2" width="1300" height="392"/>
+        <image name="more_off" width="287" height="287"/>
+        <image name="more_on" width="287" height="287"/>
+        <image name="near_off" width="287" height="287"/>
+        <image name="near_on" width="287" height="287"/>
+        <image name="setting_off" width="287" height="287"/>
+        <image name="setting_on" width="287" height="287"/>
         <image name="signin" width="983" height="167"/>
         <image name="signup" width="983" height="167"/>
     </resources>
