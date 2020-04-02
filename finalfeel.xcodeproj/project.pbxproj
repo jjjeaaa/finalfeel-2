@@ -53,7 +53,7 @@
 		18FBDBE780D814EA676C78F1 /* Pods-finalfeel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finalfeel.debug.xcconfig"; path = "Target Support Files/Pods-finalfeel/Pods-finalfeel.debug.xcconfig"; sourceTree = "<group>"; };
 		28CCFD1F2423608B00708BC6 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		28CCFD2124237B5800708BC6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		28E13C3D24231D5B0022BF01 /* finalfeel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalfeel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E13C3D24231D5B0022BF01 /* finalfeel2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalfeel2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E13C4024231D5B0022BF01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28E13C4224231D5B0022BF01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		28E13C4424231D5B0022BF01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		28E13C3E24231D5B0022BF01 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				28E13C3D24231D5B0022BF01 /* finalfeel.app */,
+				28E13C3D24231D5B0022BF01 /* finalfeel2.app */,
 				28E13C5324231D5D0022BF01 /* finalfeelTests.xctest */,
 				28E13C5E24231D5D0022BF01 /* finalfeelUITests.xctest */,
 			);
@@ -246,7 +246,7 @@
 				89053DEB2426678C001A9D07 /* FacebookLogin */,
 			);
 			productName = finalfeel;
-			productReference = 28E13C3D24231D5B0022BF01 /* finalfeel.app */;
+			productReference = 28E13C3D24231D5B0022BF01 /* finalfeel2.app */;
 			productType = "com.apple.product-type.application";
 		};
 		28E13C5224231D5D0022BF01 /* finalfeelTests */ = {
@@ -697,7 +697,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = a.finalfeel;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = finalfeel2;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -717,7 +717,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = a.finalfeel;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = finalfeel2;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

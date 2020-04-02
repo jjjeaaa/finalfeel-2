@@ -46,7 +46,7 @@ class ViewController: UIViewController,LoginButtonDelegate{
                 return
             }
             
-        print("Login success!!!")
+        print("Login success!")
         }
 
     }
