@@ -31,7 +31,7 @@ class homeViewController: UIViewController {
                    try Auth.auth().signOut()
                    self.dismiss(animated: true, completion: nil)
                  } catch (let error) {
-                   print("Auth sign out failed: \(error)")
+                   print("Authen sign out failed: \(error)")
                  }
     }
     
