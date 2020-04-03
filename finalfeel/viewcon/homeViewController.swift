@@ -8,6 +8,7 @@
 
 import UIKit
 import JTAppleCalendar
+import Firebase
 
 class homeViewController: UIViewController {
 
@@ -25,11 +26,21 @@ class homeViewController: UIViewController {
     var phychoButtonCenter: CGPoint!
     
 
+    @IBAction func signoutButton(_ sender: Any) {
+        do {
+                   try Auth.auth().signOut()
+                   self.dismiss(animated: true, completion: nil)
+                 } catch (let error) {
+                   print("Auth sign out failed: \(error)")
+                 }
+    }
     
     @IBOutlet weak var date: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         getCurrentDateTime()
+        
+        
         moodButtonCenter = mood.center
         blogButtonCenter = blog.center
         settingButtonCenter = setting.center
