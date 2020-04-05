@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		283AE0832439C15C00389F66 /* mapkid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283AE0822439C15C00389F66 /* mapkid.swift */; };
 		28CCFD202423608B00708BC6 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CCFD1F2423608B00708BC6 /* Utilities.swift */; };
 		28CCFD2224237B5800708BC6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CCFD2124237B5800708BC6 /* Constants.swift */; };
 		28E13C4124231D5B0022BF01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E13C4024231D5B0022BF01 /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		10D005B80E1FCD60D78F9FD7 /* Pods-finalfeelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finalfeelTests.debug.xcconfig"; path = "Target Support Files/Pods-finalfeelTests/Pods-finalfeelTests.debug.xcconfig"; sourceTree = "<group>"; };
 		122004C2372103D7B71C73C9 /* Pods_finalfeelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_finalfeelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FBDBE780D814EA676C78F1 /* Pods-finalfeel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finalfeel.debug.xcconfig"; path = "Target Support Files/Pods-finalfeel/Pods-finalfeel.debug.xcconfig"; sourceTree = "<group>"; };
+		283AE0822439C15C00389F66 /* mapkid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapkid.swift; sourceTree = "<group>"; };
 		28CCFD1F2423608B00708BC6 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		28CCFD2124237B5800708BC6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		28E13C3D24231D5B0022BF01 /* finalfeel2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalfeel2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				28CCFD2124237B5800708BC6 /* Constants.swift */,
+				283AE0822439C15C00389F66 /* mapkid.swift */,
 				28E13C74242350760022BF01 /* signinViewController.swift */,
 				28E13C76242350A70022BF01 /* homeViewController.swift */,
 				28E13C72242350630022BF01 /* signupViewController.swift */,
@@ -513,6 +516,7 @@
 				890F4A922434B07700E571A0 /* ViewIdentifiers.swift in Sources */,
 				28E13C4124231D5B0022BF01 /* AppDelegate.swift in Sources */,
 				28E13C73242350630022BF01 /* signupViewController.swift in Sources */,
+				283AE0832439C15C00389F66 /* mapkid.swift in Sources */,
 				28E13C4324231D5B0022BF01 /* SceneDelegate.swift in Sources */,
 				28CCFD2224237B5800708BC6 /* Constants.swift in Sources */,
 			);

@@ -241,6 +241,7 @@
                                 <state key="selected" image="near_off"/>
                                 <connections>
                                     <action selector="nearClicked:" destination="yiR-5h-SVj" eventType="touchUpInside" id="EYW-6B-EBG"/>
+                                    <segue destination="GWg-zw-VdF" kind="show" id="bUF-iZ-bHL"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="date1" translatesAutoresizingMaskIntoConstraints="NO" id="l3N-2s-c57">
@@ -363,6 +364,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phW-r6-WXV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1872" y="-68"/>
+        </scene>
+        <!--Mapkid-->
+        <scene sceneID="8c9-Tb-Ziu">
+            <objects>
+                <viewController id="GWg-zw-VdF" customClass="mapkid" customModule="finalfeel2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mwc-IT-EhP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rwG-wP-cxI">
+                                <rect key="frame" x="0.0" y="67" width="414" height="829"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GWg-zw-VdF" id="6I1-Yu-Wpl"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1hP-2A-cAr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mto-PZ-UFH"/>
+                    <connections>
+                        <outlet property="mapView" destination="rwG-wP-cxI" id="AC3-sr-04E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xI5-lg-heW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2708.6956521739135" y="-378.34821428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2eW-3x-z1H">
