@@ -243,6 +243,7 @@ PODS:
     - FirebaseCore (~> 6.6)
     - GoogleUtilities/UserDefaults (~> 6.5)
     - PromisesObjC (~> 1.2)
+  - FSCalendar (2.8.1)
   - GoogleAppMeasurement (6.3.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
@@ -299,7 +300,6 @@ PODS:
   - GTMSessionFetcher/Core (1.3.1)
   - GTMSessionFetcher/Full (1.3.1):
     - GTMSessionFetcher/Core (= 1.3.1)
-  - JTAppleCalendar (7.1.6)
   - leveldb-library (1.22)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
@@ -317,8 +317,8 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - FSCalendar
   - GoogleSignIn
-  - JTAppleCalendar (from `https://github.com/patchthecode/JTAppleCalendar.git`, branch `7.1.6`)
 
 SPEC REPOS:
   trunk:
@@ -338,6 +338,7 @@ SPEC REPOS:
     - FirebaseCoreDiagnosticsInterop
     - FirebaseFirestore
     - FirebaseInstallations
+    - FSCalendar
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
@@ -350,16 +351,6 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
-
-EXTERNAL SOURCES:
-  JTAppleCalendar:
-    :branch: 7.1.6
-    :git: https://github.com/patchthecode/JTAppleCalendar.git
-
-CHECKOUT OPTIONS:
-  JTAppleCalendar:
-    :commit: cc2e3e364ac0c23b6ef2bd221362cbaa16f38fac
-    :git: https://github.com/patchthecode/JTAppleCalendar.git
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -378,6 +369,7 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnosticsInterop: 296e2c5f5314500a850ad0b83e9e7c10b011a850
   FirebaseFirestore: 71925e62a5d1cbfaff46aa4d5107e525cc48356a
   FirebaseInstallations: 575cd32f2aec0feeb0e44f5d0110a09e5e60b47b
+  FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   GoogleAppMeasurement: c29d405ff76e18551b5d158eaba6753fda8c7542
   GoogleDataTransport: a857c6a002d201b524dd4bc2ed7e7355ed07e785
   GoogleDataTransportCCTSupport: 32f75fbe904c82772fcbb6b6bd4525bfb6f2a862
@@ -387,11 +379,10 @@ SPEC CHECKSUMS:
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
-  JTAppleCalendar: 191d13f8c8262ae55750e7d10208eae315b4b1bc
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: 3ce0e20d8d175ff8a5328474c27ae4bd6d69aab0
+PODFILE CHECKSUM: 29e657c9862e780b5b4685d10e4c98978a260de3
 
 COCOAPODS: 1.8.4

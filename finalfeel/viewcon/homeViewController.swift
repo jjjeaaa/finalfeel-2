@@ -7,18 +7,19 @@
 //
 
 import UIKit
-import JTAppleCalendar
 import Firebase
+import FSCalendar
 
 class homeViewController: UIViewController {
 
     let formatter = DateFormatter()
     @IBOutlet weak var mood: UIButton!
-    @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var blog: UIButton!
     @IBOutlet weak var setting: UIButton!
     @IBOutlet weak var phycho: UIButton!
     @IBOutlet weak var more: UIButton!
+    
+    private weak var calendar: FSCalendar!
     
     var moodButtonCenter: CGPoint!
     var blogButtonCenter: CGPoint!
@@ -36,21 +37,48 @@ class homeViewController: UIViewController {
     }
     
     @IBOutlet weak var date: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         getCurrentDateTime()
+        mycalendar()
+               
+             moodButtonCenter = mood.center
+             blogButtonCenter = blog.center
+             settingButtonCenter = setting.center
+             phychoButtonCenter = phycho.center
+             
+             mood.center = more.center
+             blog.center = more.center
+             phycho.center = more.center
+             setting.center = more.center
         
-        
-        moodButtonCenter = mood.center
-        blogButtonCenter = blog.center
-        settingButtonCenter = setting.center
-        phychoButtonCenter = phycho.center
-        
-        mood.center = more.center
-        blog.center = more.center
-        phycho.center = more.center
-        setting.center = more.center
+       
+     
         // Do any additional setup after loading the view.
+    }
+    
+    func mycalendar() {
+      let calendar = FSCalendar(frame: CGRect(x: 0, y: 0, width: 320, height: 300))
+      calendar.dataSource = self
+      calendar.delegate = self
+      calendar.register(FSCalendarCell.self, forCellReuseIdentifier: "Cell")
+      calendar.translatesAutoresizingMaskIntoConstraints = false
+      
+
+      view.addSubview(calendar)
+        
+      calendar.backgroundColor = UIColor.init(red: 236/255, green: 192/255, blue: 180/255, alpha: 1)
+        calendar.appearance.titleFont = UIFont(name: "Chalkduster", size: 17.0)
+        calendar.appearance.weekdayFont = UIFont(name: "Chalkduster", size: 17.0)
+        calendar.appearance.headerTitleFont = UIFont(name: "Chalkduster", size: 20.0)
+      calendar.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+      calendar.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+      calendar.heightAnchor.constraint(equalToConstant: 300).isActive = true
+      calendar.widthAnchor.constraint(equalToConstant: view.frame.width - 40).isActive = true
+      
+      self.calendar = calendar
     }
     func getCurrentDateTime(){
         let formatter = DateFormatter()
@@ -131,59 +159,11 @@ class homeViewController: UIViewController {
               sender.setImage(UIImage(named : "setting_off"), for: UIControl.State.normal)
         }
     }
-//
-//    func toggleButton(button:UIButton, onImage:UIImage, offImage:UIImage){
-//        if button.currentImage == offImage{
-//            button.setImage(onImage, for: UIControl.State.normal)
-//        } else{
-//            button.setImage(offImage, for: UIControl.State.normal)
-//        }
-//    }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-//    func configureCell(view: JTAppleCell?, cellState: CellState) {
-//          guard let myCustomCell = view as? customCell  else { return }
-//          
-//      }
-   
 }
-
-    
-//    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-//
-//    }
-
-//    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
-//        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! customCell
-//        cell.datelabel.text = cellState.text
-//        return cell
-//    }
-//
-//    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-//     formatter.dateFormat = "yyyy MM dd"
-//        formatter.timeZone = Calendar.current.timeZone
-//        formatter.locale = Calendar.current.locale
-//
-//
-//        let startDate = formatter.date(from: "2020 01 01")!
-//        let endDate = formatter.date(from: "2020 12 31")!
-//
-////        formatter.dateFormat = "yyyy-MM-dd"
-////
-////        let startDate = formatter.date(from:2020-01-01)
-////        let endDate = formatter.date(from: 2020-12-31)!
-//
-//
-//        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
-//        return parameters
-//    }
-//
-//
-//}
+extension homeViewController: FSCalendarDelegate, FSCalendarDataSource{
+    func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
+        let cell = calendar.dequeueReusableCell(withIdentifier: "Cell", for: date, at: position)
+        return cell
+    }
+}

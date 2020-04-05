@@ -14,8 +14,8 @@ pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKPlacesKit'
-pod 'Firebase/Firestore'
-pod 'JTAppleCalendar', :git => 'https://github.com/patchthecode/JTAppleCalendar.git', :branch => '7.1.6'
+pod 'Firebase/Firestore' 
+ pod 'FSCalendar'
   # Pods for finalfeel
 
   target 'finalfeelTests' do
