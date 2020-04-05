@@ -25,7 +25,6 @@
 		89053DEC2426678C001A9D07 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 89053DEB2426678C001A9D07 /* FacebookLogin */; };
 		890F4A922434B07700E571A0 /* ViewIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F4A912434B07700E571A0 /* ViewIdentifiers.swift */; };
 		890F4A952434B46000E571A0 /* MyViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F4A942434B46000E571A0 /* MyViewControllerExtension.swift */; };
-		892BECBA24362A2D001C18C9 /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892BECB924362A2D001C18C9 /* customCell.swift */; };
 		8987A4042423B7B900BDBA91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8987A4032423B7B900BDBA91 /* GoogleService-Info.plist */; };
 		E2665C1D46C604E30DB45AFB /* Pods_finalfeelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 122004C2372103D7B71C73C9 /* Pods_finalfeelTests.framework */; };
 		FBA77307C6B1383EDCEAF376 /* Pods_finalfeel_finalfeelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 682A780B2DB51373C854067B /* Pods_finalfeel_finalfeelUITests.framework */; };
@@ -76,7 +75,6 @@
 		89053DED242668F6001A9D07 /* finalfeel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = finalfeel.entitlements; sourceTree = "<group>"; };
 		890F4A912434B07700E571A0 /* ViewIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentifiers.swift; sourceTree = "<group>"; };
 		890F4A942434B46000E571A0 /* MyViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewControllerExtension.swift; sourceTree = "<group>"; };
-		892BECB924362A2D001C18C9 /* customCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
 		8987A4032423B7B900BDBA91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B4CCA4C036A5B4C9333B1C1 /* Pods-finalfeel-finalfeelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finalfeel-finalfeelUITests.debug.xcconfig"; path = "Target Support Files/Pods-finalfeel-finalfeelUITests/Pods-finalfeel-finalfeelUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DBA5684EFBE78CBA04F6B4F8 /* Pods-finalfeel-finalfeelUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finalfeel-finalfeelUITests.release.xcconfig"; path = "Target Support Files/Pods-finalfeel-finalfeelUITests/Pods-finalfeel-finalfeelUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 				28E13C72242350630022BF01 /* signupViewController.swift */,
 				28E13C4424231D5B0022BF01 /* ViewController.swift */,
 				890F4A912434B07700E571A0 /* ViewIdentifiers.swift */,
-				892BECB924362A2D001C18C9 /* customCell.swift */,
 			);
 			path = viewcon;
 			sourceTree = "<group>";
@@ -515,7 +512,6 @@
 				28E13C75242350760022BF01 /* signinViewController.swift in Sources */,
 				890F4A922434B07700E571A0 /* ViewIdentifiers.swift in Sources */,
 				28E13C4124231D5B0022BF01 /* AppDelegate.swift in Sources */,
-				892BECBA24362A2D001C18C9 /* customCell.swift in Sources */,
 				28E13C73242350630022BF01 /* signupViewController.swift in Sources */,
 				28E13C4324231D5B0022BF01 /* SceneDelegate.swift in Sources */,
 				28CCFD2224237B5800708BC6 /* Constants.swift in Sources */,
