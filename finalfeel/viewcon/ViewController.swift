@@ -13,12 +13,36 @@ import GoogleSignIn
 
 
 class ViewController: UIViewController,LoginButtonDelegate{
-    private var authListener: AuthStateDidChangeListenerHandle?
     
+    @IBOutlet weak var facebooklogin: FBLoginButton!
+    @IBOutlet weak var googlelogin: GIDSignInButton!
+    private var authListener: AuthStateDidChangeListenerHandle?
+    let socialAuth : SocialAuthenticator = SocialAuthenticator()
     override func viewDidLoad() {
               super.viewDidLoad()
+       
              GIDSignIn.sharedInstance()?.presentingViewController = self
       }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+     
+        authListener = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if let _ = user {
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.setRootViewControllerWith(viewIdentifier: ViewIdentifiers.profile.rawValue)
+            }
+        })
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+         super.viewWillDisappear(animated)
+         
+         Auth.auth().removeStateDidChangeListener(authListener!)
+     }
+    
     
       override func didReceiveMemoryWarning() {
              super.didReceiveMemoryWarning()
@@ -26,13 +50,7 @@ class ViewController: UIViewController,LoginButtonDelegate{
          }
     
 
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//         super.viewWillDisappear(animated)
-//         
-//        Auth.auth().removeStateDidChangeListener(authListener!)
-//     }
-//         
+
     
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
             if let error = error {
@@ -50,8 +68,7 @@ class ViewController: UIViewController,LoginButtonDelegate{
         }
 
     }
-    
-    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
         print("Logged out")
     }
     
@@ -91,14 +108,6 @@ class ViewController: UIViewController,LoginButtonDelegate{
         }
 
 
-//    func transitionToHome() {
-//
-//           let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? homeViewController
-//
-//           view.window?.rootViewController = homeViewController
-//           view.window?.makeKeyAndVisible()
-//
-//       }
 
     @IBOutlet weak var signup: UIButton!
     @IBOutlet weak var signin: UIButton!

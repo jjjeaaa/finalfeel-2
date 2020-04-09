@@ -25,6 +25,10 @@
 		89053DEC2426678C001A9D07 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 89053DEB2426678C001A9D07 /* FacebookLogin */; };
 		890F4A922434B07700E571A0 /* ViewIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F4A912434B07700E571A0 /* ViewIdentifiers.swift */; };
 		890F4A952434B46000E571A0 /* MyViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890F4A942434B46000E571A0 /* MyViewControllerExtension.swift */; };
+		89148DF1243A01280016E1FD /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89148DF0243A01280016E1FD /* mapViewController.swift */; };
+		8921DA54243ADE4200397C25 /* SocialAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8921DA53243ADE4200397C25 /* SocialAuthenticator.swift */; };
+		8921DA56243ADEBA00397C25 /* SocialDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8921DA55243ADEBA00397C25 /* SocialDelegate.swift */; };
+		8921DA58243ADEF900397C25 /* ResponseDelagate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8921DA57243ADEF900397C25 /* ResponseDelagate.swift */; };
 		8987A4042423B7B900BDBA91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8987A4032423B7B900BDBA91 /* GoogleService-Info.plist */; };
 		E2665C1D46C604E30DB45AFB /* Pods_finalfeelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 122004C2372103D7B71C73C9 /* Pods_finalfeelTests.framework */; };
 		FBA77307C6B1383EDCEAF376 /* Pods_finalfeel_finalfeelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 682A780B2DB51373C854067B /* Pods_finalfeel_finalfeelUITests.framework */; };
@@ -75,6 +79,10 @@
 		89053DED242668F6001A9D07 /* finalfeel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = finalfeel.entitlements; sourceTree = "<group>"; };
 		890F4A912434B07700E571A0 /* ViewIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentifiers.swift; sourceTree = "<group>"; };
 		890F4A942434B46000E571A0 /* MyViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewControllerExtension.swift; sourceTree = "<group>"; };
+		89148DF0243A01280016E1FD /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
+		8921DA53243ADE4200397C25 /* SocialAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAuthenticator.swift; sourceTree = "<group>"; };
+		8921DA55243ADEBA00397C25 /* SocialDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialDelegate.swift; sourceTree = "<group>"; };
+		8921DA57243ADEF900397C25 /* ResponseDelagate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDelagate.swift; sourceTree = "<group>"; };
 		8987A4032423B7B900BDBA91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B4CCA4C036A5B4C9333B1C1 /* Pods-finalfeel-finalfeelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finalfeel-finalfeelUITests.debug.xcconfig"; path = "Target Support Files/Pods-finalfeel-finalfeelUITests/Pods-finalfeel-finalfeelUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DBA5684EFBE78CBA04F6B4F8 /* Pods-finalfeel-finalfeelUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finalfeel-finalfeelUITests.release.xcconfig"; path = "Target Support Files/Pods-finalfeel-finalfeelUITests/Pods-finalfeel-finalfeelUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +195,7 @@
 				28E13C72242350630022BF01 /* signupViewController.swift */,
 				28E13C4424231D5B0022BF01 /* ViewController.swift */,
 				890F4A912434B07700E571A0 /* ViewIdentifiers.swift */,
+				89148DF0243A01280016E1FD /* mapViewController.swift */,
 			);
 			path = viewcon;
 			sourceTree = "<group>";
@@ -195,8 +204,19 @@
 			isa = PBXGroup;
 			children = (
 				890F4A942434B46000E571A0 /* MyViewControllerExtension.swift */,
+				8921DA50243ADDB300397C25 /* network */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		8921DA50243ADDB300397C25 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				8921DA53243ADE4200397C25 /* SocialAuthenticator.swift */,
+				8921DA55243ADEBA00397C25 /* SocialDelegate.swift */,
+				8921DA57243ADEF900397C25 /* ResponseDelagate.swift */,
+			);
+			path = network;
 			sourceTree = "<group>";
 		};
 		9A597B763FBEB1F1A1EE5BD1 /* Pods */ = {
@@ -507,11 +527,15 @@
 			files = (
 				28E13C4524231D5B0022BF01 /* ViewController.swift in Sources */,
 				28E13C77242350A70022BF01 /* homeViewController.swift in Sources */,
+				8921DA54243ADE4200397C25 /* SocialAuthenticator.swift in Sources */,
 				890F4A952434B46000E571A0 /* MyViewControllerExtension.swift in Sources */,
 				28CCFD202423608B00708BC6 /* Utilities.swift in Sources */,
 				28E13C75242350760022BF01 /* signinViewController.swift in Sources */,
 				890F4A922434B07700E571A0 /* ViewIdentifiers.swift in Sources */,
 				28E13C4124231D5B0022BF01 /* AppDelegate.swift in Sources */,
+				8921DA56243ADEBA00397C25 /* SocialDelegate.swift in Sources */,
+				8921DA58243ADEF900397C25 /* ResponseDelagate.swift in Sources */,
+				89148DF1243A01280016E1FD /* mapViewController.swift in Sources */,
 				28E13C73242350630022BF01 /* signupViewController.swift in Sources */,
 				28E13C4324231D5B0022BF01 /* SceneDelegate.swift in Sources */,
 				28CCFD2224237B5800708BC6 /* Constants.swift in Sources */,
@@ -710,7 +734,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = finalfeel/finalfeel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AUQ7UHVKAF;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = finalfeel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

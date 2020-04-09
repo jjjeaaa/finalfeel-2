@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import finalfeel
+@testable import finalfeel2
 
 class finalfeelTests: XCTestCase {
 

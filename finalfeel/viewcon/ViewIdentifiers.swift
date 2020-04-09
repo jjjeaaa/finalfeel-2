@@ -10,5 +10,5 @@ import Foundation
 enum ViewIdentifiers: String {
 
     case email = "signinViewController"
-    case profile = "homeViewController"
+    case profile = "HomeVc"
 }

@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import IQKeyboardManager
 
 
 class signinViewController: UIViewController {
@@ -16,6 +17,7 @@ class signinViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
 
     @IBOutlet weak var error: UILabel!
+    
     private var authListener: AuthStateDidChangeListenerHandle?
    
     override func viewDidLoad() {
@@ -23,15 +25,22 @@ class signinViewController: UIViewController {
 
         // Do any additional setup after loading the view.
          setUpElements()
-        Auth.auth().addStateDidChangeListener(){ auth, user in
-//          if user != nil {
-//            let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? homeViewController
-//
-//           self.view.window?.rootViewController = homeViewController
-//          }
         }
-        }
-        
+        override func viewWillAppear(_ animated: Bool) {
+              authListener = Auth.auth().addStateDidChangeListener({ (auth, user) in
+                  if let _ = user {
+                      let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                      appDelegate.setRootViewControllerWith(viewIdentifier: ViewIdentifiers.profile.rawValue)
+                  }
+              })
+          }
+          
+          override func viewWillDisappear(_ animated: Bool) {
+              super.viewWillDisappear(animated)
+            let _ = IQKeyboardManager.shared().resignFirstResponder()
+              Auth.auth().removeStateDidChangeListener(authListener!)
+          }
+
         func setUpElements() {
             
             // Hide the error label
@@ -40,32 +49,10 @@ class signinViewController: UIViewController {
             // Style the elements
             Utilities.styleTextField(username)
             Utilities.styleTextField(password)
-//            Utilities.styleFilledButton(login)
+
         }
   
-//    override func viewWillAppear(_ animated: Bool) {
-//        authListener = Auth.auth().addStateDidChangeListener({ (auth, user) in
-//            if let _ = user {
-//                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//                appDelegate.setRootViewControllerWith(viewIdentifier: ViewIdentifiers.profile.rawValue)
-//            }
-//        })
-//    }
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//       Auth.auth().removeStateDidChangeListener(authListener!)
-//    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBAction func backButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

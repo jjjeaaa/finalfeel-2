@@ -39,7 +39,7 @@ class signupViewController: UIViewController {
         //check that all fields are filled in
         if username.text?.trimmingCharacters(in: . whitespacesAndNewlines) == "" ||
         password.text? .trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            email.text? .trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+     email.text? .trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             
              return "Please fill in all fields."
 }

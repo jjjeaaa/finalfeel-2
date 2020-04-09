@@ -75,7 +75,7 @@ class homeViewController: UIViewController {
         calendar.appearance.headerTitleFont = UIFont(name: "Chalkduster", size: 20.0)
       calendar.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
       calendar.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-      calendar.heightAnchor.constraint(equalToConstant: 300).isActive = true
+      calendar.heightAnchor.constraint(equalToConstant: 250).isActive = true
       calendar.widthAnchor.constraint(equalToConstant: view.frame.width - 40).isActive = true
       
       self.calendar = calendar

@@ -16,6 +16,7 @@ pod 'FBSDKShareKit'
 pod 'FBSDKPlacesKit'
 pod 'Firebase/Firestore' 
  pod 'FSCalendar'
+pod 'IQKeyboardManager'
   # Pods for finalfeel
 
   target 'finalfeelTests' do
